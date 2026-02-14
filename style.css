@@ -1,0 +1,68 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --accent-color: #38bdf8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: rgba(15, 23, 42, 0.9);
+    position: sticky;
+    top: 0;
+}
+
+.logo { font-weight: bold; font-size: 1.5rem; color: var(--accent-color); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: white; transition: 0.3s; }
+nav ul li a:hover { color: var(--accent-color); }
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.highlight { color: var(--accent-color); }
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--accent-color);
+    transition: transform 0.3s;
+}
+
+.project-card:hover { transform: translateY(-10px); }
